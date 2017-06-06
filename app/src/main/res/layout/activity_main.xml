@@ -22,14 +22,14 @@
             android:layout_height="wrap_content"
             android:hint="@string/user_name"
             android:inputType="textAutoComplete"
-            android:drawableLeft="@drawable/ic_user"/>
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp" />
         <EditText
             android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user_password"
             android:inputType="textPassword"
-            android:drawableLeft="@drawable/ic_pass"/>
+            android:drawableLeft="@drawable/ic_fingerprint_black_24dp" />
         <Button
             android:id="@+id/btn_accept"
             android:layout_width="match_parent"

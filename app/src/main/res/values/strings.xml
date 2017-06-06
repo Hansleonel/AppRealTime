@@ -3,4 +3,14 @@
     <string name="user_name">User</string>
     <string name="user_password">Password</string>
     <string name="accept">Accept</string>
+    <string name="message">Send a message</string>
+    <string name="app_tittle">AppYoudiFy</string>
+    <string name="section01">Regiones a Cargo</string>
+    <string name="section02">Obras a realizar</string>
+    <string name="section03">Peticiones</string>
+    <string name="options">Consejos</string>
+    <string name="option01">Noticias</string>
+    <string name="option02">Prensa</string>
+
+
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_1"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:title="@string/section01" />
+        <item
+            android:id="@+id/menu_seccion_2"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/section02" />
+        <item
+            android:id="@+id/menu_seccion_3"
+            android:icon="@drawable/ic_send_black_24dp"
+            android:title="@string/section03" />
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="@string/options">
+        <menu>
+            <item
+                android:id="@+id/menu_opcion_1"
+                android:title="@string/option01" />
+            <item
+                android:id="@+id/menu_opcion_2"
+                android:title="@string/option02" />
+        </menu>
+    </item>
+</menu>
