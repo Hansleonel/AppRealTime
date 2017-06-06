@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme.AppCompat.Light.NoActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Theme.AppCompat.Light.NoActionBar">
+    android:id="@+id/frm_layout">
 
     <ImageView
         android:layout_width="match_parent"
@@ -10,12 +11,28 @@
         android:background="@color/colorPrimary"
         android:scaleType="centerCrop" />
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/user_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/user_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="91dp"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_launcher_round" />
 </FrameLayout>

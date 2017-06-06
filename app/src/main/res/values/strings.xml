@@ -11,6 +11,7 @@
     <string name="options">Consejos</string>
     <string name="option01">Noticias</string>
     <string name="option02">Prensa</string>
+    <string name="title_activity_region">RegionActivity</string>
 
 
 </resources>

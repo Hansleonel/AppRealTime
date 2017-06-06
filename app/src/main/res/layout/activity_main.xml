@@ -6,22 +6,34 @@
     android:layout_height="match_parent"
     tools:context="com.example.codehans.apprealtime.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"></android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/lbl_tittle"
+        android:gravity="center"
+        android:text="@string/app_tittle"
+        android:textSize="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_centerVertical="true"
-        android:orientation="vertical">
-        <TextView
-            android:gravity="center"
-            android:text="APLICACION"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <EditText
             android:id="@+id/txt_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user_name"
             android:inputType="textAutoComplete"
+            android:layout_margin="10dp"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp" />
         <EditText
             android:id="@+id/txt_password"
@@ -29,11 +41,15 @@
             android:layout_height="wrap_content"
             android:hint="@string/user_password"
             android:inputType="textPassword"
+            android:layout_margin="10dp"
             android:drawableLeft="@drawable/ic_fingerprint_black_24dp" />
         <Button
             android:id="@+id/btn_accept"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:text="@string/accept"/>
     </LinearLayout>
 

@@ -21,10 +21,12 @@
         <menu>
             <item
                 android:id="@+id/menu_opcion_1"
-                android:title="@string/option01" />
+                android:title="@string/option01"
+                android:icon="@drawable/ic_live_tv_black_24dp" />
             <item
                 android:id="@+id/menu_opcion_2"
-                android:title="@string/option02" />
+                android:title="@string/option02"
+                android:icon="@drawable/ic_photo_camera_black_24dp" />
         </menu>
     </item>
 </menu>
