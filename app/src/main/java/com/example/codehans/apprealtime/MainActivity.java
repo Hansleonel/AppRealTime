@@ -2,6 +2,7 @@ package com.example.codehans.apprealtime;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,10 +25,11 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_Accept;
-    private EditText txt_User;
+    public static EditText txt_User;
     private EditText txt_Password;
 
     private TextView Tittle;
+    private NavigationView navview;
 
     //parametros usados para el uso de Json y la libreria Volley
     private static String IP = "http://realtimeapp.hol.es/connectionphp/Login_GetID.php?id=";
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         txt_User = (EditText) findViewById(R.id.txt_user);
         txt_Password = (EditText) findViewById(R.id.txt_password);
         btn_Accept = (Button) findViewById(R.id.btn_accept);
+
+        navview = (NavigationView) findViewById(R.id.navigationViewRegionDetail);
 
         Tittle = (TextView) findViewById(R.id.lbl_tittle);
         Typeface metropolis = Typeface.createFromAsset(getAssets(), "fonts/Metropolis1920.otf");

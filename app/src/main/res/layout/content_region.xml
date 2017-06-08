@@ -8,14 +8,6 @@
     tools:context="com.example.codehans.apprealtime.RegionActivity"
     tools:showIn="@layout/activity_region">
 
-    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_region"
-        android:layout_width="?attr/actionBarSize"
-        android:layout_height="match_parent"
-        android:elevation="4dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <fragment
         android:id="@+id/mapregion"

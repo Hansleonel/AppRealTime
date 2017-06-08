@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".RegionDetailActivity"
+    tools:showIn="@layout/activity_region_detail">
+
+    <!--Toolbar en el content_region_detail y luego el content
+     sera incluido dentro de activity_region_detail-->
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/appbar_region_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview01"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/appbar_region_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:paddingTop="30dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/lbl_card01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Prioridad de Emergencia" />
+
+        <TextView
+            android:id="@+id/lbl_priority01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="MUY ALTA"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview02"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cardview01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:paddingTop="30dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/lbl_card02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Zonas de Emergencia" />
+
+        <TextView
+            android:id="@+id/lbl_priority02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="REGION CUZCO"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview03"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cardview02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:paddingTop="30dp"
+        card_view:cardBackgroundColor="@color/colorAccent"
+        card_view:cardCornerRadius="6dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Obras"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="TUS OBRAS PENDIENTES"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview04"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cardview03"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:paddingTop="30dp"
+        card_view:cardCornerRadius="6dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/accept" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="40dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:text="TIPO DE EMERGENCIA" />
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

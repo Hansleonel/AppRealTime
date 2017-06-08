@@ -12,6 +12,7 @@
     <string name="option01">Noticias</string>
     <string name="option02">Prensa</string>
     <string name="title_activity_region">RegionActivity</string>
+    <string name="app_tittle01">COEN</string>
 
 
 </resources>

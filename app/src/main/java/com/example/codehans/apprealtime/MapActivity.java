@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,11 +29,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.w3c.dom.Text;
 
+import static com.example.codehans.apprealtime.MainActivity.txt_User;
+
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private Toolbar appbar;
     private GoogleMap mapa;
     private DrawerLayout drawerLayout;
+    private TextView user_name;
 
     private Button btn_map;
 
@@ -60,10 +64,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         fabMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CameraUpdate camupdt = CameraUpdateFactory.newLatLngZoom(new LatLng(-9.189967, -75.015152), 5);
+                mapa.moveCamera(camupdt);
                 //marcadores con sus respectivos estados y colores
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-12.046373, -77.042754)).title("Lima").snippet("Grado de Alerta Medio").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-12.068636, -75.210298)).title("Huancayo").snippet("Grado de Alerta Alto"));
-                mapa.addMarker(new MarkerOptions().position(new LatLng(-13.53195, -71.96746259999998)).title("Cuzco"));
+                mapa.addMarker(new MarkerOptions().position(new LatLng(-13.53195, -71.96746259999998)).title("Cuzco").snippet("Grado de Alerta Alto"));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("Cuerto marcador"));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-3.5564921, -80.42708849999997)).title("el quinto marcador").icon(BitmapDescriptorFactory.defaultMarker(98)));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("el sexto marcador"));
@@ -80,6 +86,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
+                user_name = (TextView) findViewById(R.id.user_header);
+                user_name.setText(txt_User.getText().toString());
                 return true;
         }
         return super.onOptionsItemSelected(item);

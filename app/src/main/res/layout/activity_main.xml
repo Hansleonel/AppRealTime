@@ -34,6 +34,7 @@
             android:hint="@string/user_name"
             android:inputType="textAutoComplete"
             android:layout_margin="10dp"
+            android:drawablePadding="10dp"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp" />
         <EditText
             android:id="@+id/txt_password"
@@ -41,6 +42,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/user_password"
             android:inputType="textPassword"
+            android:drawablePadding="10dp"
             android:layout_margin="10dp"
             android:drawableLeft="@drawable/ic_fingerprint_black_24dp" />
         <Button

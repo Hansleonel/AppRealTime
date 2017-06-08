@@ -41,7 +41,9 @@
         <activity
             android:name=".RegionActivity"
             android:label="@string/title_activity_region"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".RegionDetailActivity" />
+        <activity android:name=".ObraActivity"></activity>
     </application>
 
 </manifest>
