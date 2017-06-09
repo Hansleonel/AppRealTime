@@ -4,11 +4,11 @@ package com.example.codehans.apprealtime;
  * Created by ogtie05 on 7/06/2017.
  */
 
-public class RegionDetail {
+public class ObraPendienteContainer {
     private String Titulo;
     private String Subt;
 
-    public RegionDetail(String titulo, String subt) {
+    public ObraPendienteContainer(String titulo, String subt) {
         Titulo = titulo;
         Subt = subt;
     }

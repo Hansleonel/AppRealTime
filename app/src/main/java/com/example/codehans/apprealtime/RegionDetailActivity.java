@@ -28,7 +28,7 @@ public class RegionDetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar_region_detail);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Cuzco");
+        getSupportActionBar().setTitle("Detalle Region: Cuzco");
 
         drawerL_Region_Detail = (DrawerLayout) findViewById(R.id.drawer_layout_region_detail);
 
@@ -36,6 +36,7 @@ public class RegionDetailActivity extends AppCompatActivity {
 
         cardviewRegionDetail = (CardView) findViewById(R.id.cardview03);
 
+        //CARD VIEW
         cardviewRegionDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,15 +45,16 @@ public class RegionDetailActivity extends AppCompatActivity {
             }
         });
 
+        //DRAWER NAVIGATION
         navview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_seccion_1:
                         Intent intent = new Intent(RegionDetailActivity.this, MapActivity.class);
-                        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        //finish();
+                        finish();
                         break;
                 }
                 return true;

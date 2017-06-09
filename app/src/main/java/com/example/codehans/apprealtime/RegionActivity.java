@@ -35,6 +35,7 @@ public class RegionActivity extends AppCompatActivity implements OnMapReadyCallb
         setContentView(R.layout.activity_region);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Region: Cuzco");
 
         //toolbar = (Toolbar) findViewById(R.id.);
         //setSupportActionBar(toolbar);
