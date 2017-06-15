@@ -52,6 +52,13 @@
             android:text="MUY ALTA"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingLeft="280dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_region" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -84,6 +91,13 @@
             android:text="REGION CUZCO"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingLeft="280dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_alert" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -116,6 +130,13 @@
             android:text="TUS OBRAS PENDIENTES"
             android:textColor="@android:color/white"
             android:textSize="20dp" />
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingLeft="280dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_obras" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -146,6 +167,13 @@
             android:textColor="@color/colorAccent"
             android:textSize="20dp"
             android:text="TIPO DE EMERGENCIA" />
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingLeft="280dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_region" />
     </android.support.v7.widget.CardView>
 
 

@@ -24,7 +24,10 @@ public class ObraActivity extends AppCompatActivity {
 
     //usado para el recyclerView
     private RecyclerView recviewObra01;
+    private RecyclerView recviewObra02;
     private ArrayList<ObraPendienteContainer> datosObraPendiente;
+    private ArrayList<ObraPendienteContainer> datosObraRealizados;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +62,10 @@ public class ObraActivity extends AppCompatActivity {
         datosObraPendiente = new ArrayList<ObraPendienteContainer>();
         datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Saqsayhuamn"));
         datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Chinchero"));
-        datosObraPendiente.add(new ObraPendienteContainer("  ", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("  ", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("  ", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("  ", "  "));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
         recviewObra01 = (RecyclerView) findViewById(R.id.RecView_Tab01);
         //la siguiente liena no es totalmnet necesria
         recviewObra01.setHasFixedSize(true);
@@ -74,20 +77,36 @@ public class ObraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Snackbar.make(v, "Pulsado el elemento" + recviewObra01.getChildAdapterPosition(v), Snackbar.LENGTH_LONG).show();
-                Toast.makeText(ObraActivity.this, "pusaldo el elemento" + recviewObra01.getChildAdapterPosition(v), Toast.LENGTH_LONG).show();
+                //Toast.makeText(ObraActivity.this, "pusaldo el elemento" + recviewObra01.getChildAdapterPosition(v), Toast.LENGTH_LONG).show();
                 Log.i("Elemento", "Pulsado elemento" + recviewObra01.getChildAdapterPosition(v));
 
             }
         });
 
+        datosObraRealizados = new ArrayList<ObraPendienteContainer>();
+        datosObraRealizados.add(new ObraPendienteContainer("Titulo 01", "Elemento 01"));
+        datosObraRealizados.add(new ObraPendienteContainer("Titulo 02", "Elemento 02"));
+        datosObraRealizados.add(new ObraPendienteContainer("Titulo 03", "Elemento 03"));
+        datosObraRealizados.add(new ObraPendienteContainer("Titulo 04", "Elemento 04"));
+
+        ObraPendienteAdapter adaptador02 = new ObraPendienteAdapter(datosObraRealizados);
 
         recviewObra01.setAdapter(adaptador);
         //es obligatorio asociar el recyclerview a una layoutmanager
         recviewObra01.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //la siguiente linea se usa para la visualizacion de la division entre items del recyclerview
+        //recordar implementar el dividerItemDecoration
+        recviewObra01.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         //la siguiente linea es usada para la animacion del recyclerview
         //se usara una animacion por default
         recviewObra01.setItemAnimator(new DefaultItemAnimator());
 
+
+        recviewObra02 = (RecyclerView) findViewById(R.id.RecView_Tab02);
+        recviewObra02.setAdapter(adaptador02);
+        recviewObra02.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recviewObra02.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        recviewObra02.setItemAnimator(new DefaultItemAnimator());
 
     }
 

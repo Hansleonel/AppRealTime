@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -42,7 +43,6 @@ public class ObraPendienteAdapter extends RecyclerView.Adapter<ObraPendienteAdap
     @Override
     public ObraPendienteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_obra, parent, false);
-
         itemView.setOnClickListener(this);
         //usando el constructuror de la clase para inicializar el opvh
         ObraPendienteViewHolder opvh = new ObraPendienteViewHolder(itemView);

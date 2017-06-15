@@ -1,7 +1,10 @@
 package com.example.codehans.apprealtime;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +32,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.w3c.dom.Text;
 
+import java.util.Map;
+
 import static com.example.codehans.apprealtime.MainActivity.txt_User;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -37,6 +42,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private GoogleMap mapa;
     private DrawerLayout drawerLayout;
     private TextView user_name;
+    private NavigationView nav_view;
 
     private Button btn_map;
 
@@ -54,7 +60,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_map);
 
         final MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -75,6 +81,40 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("el sexto marcador"));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-15.8402218, -70.02188050000001)).title("el septimo marcador").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-16.4090474, -71.53745099999998)).title("el octavo marcador"));
+            }
+        });
+
+        nav_view = (NavigationView) findViewById(R.id.navigationMap);
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+                boolean fragmentTransaction = false;
+                Fragment fragment = null;
+
+
+                switch (menuItem.getItemId()) {
+                    case R.id.menu_opcion_1:
+                        //fragment = new Fragment_01();
+                        //fragmentTransaction = true;
+                        Toast.makeText(MapActivity.this, "opcion 1", Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.menu_opcion_2:
+                        //fragment = new Fragment_01()
+                        Toast.makeText(MapActivity.this, "opcion 2", Toast.LENGTH_LONG).show();
+                        break;
+
+                }
+
+                if (fragmentTransaction) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
+
+                    menuItem.setChecked(true);
+                    getSupportActionBar().setTitle(menuItem.getTitle());
+                }
+
+                drawerLayout.closeDrawers();
+                return true;
             }
         });
 
