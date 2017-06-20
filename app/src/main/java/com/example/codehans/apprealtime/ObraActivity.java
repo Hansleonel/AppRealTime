@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class ObraActivity extends AppCompatActivity {
 
-    Toolbar toolbar_obra;
-    DrawerLayout drawerL_obra;
+    private Toolbar toolbar_obra;
+    private DrawerLayout drawerL_obra;
 
     //usado para el recyclerView
     private RecyclerView recviewObra01;
