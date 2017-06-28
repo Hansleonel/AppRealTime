@@ -62,10 +62,10 @@ public class ObraActivity extends AppCompatActivity {
         datosObraPendiente = new ArrayList<ObraPendienteContainer>();
         datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Saqsayhuamn"));
         datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Chinchero"));
-        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
-        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "  "));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Villa Rosales"));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Balconcillo"));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "El Bosque"));
+        datosObraPendiente.add(new ObraPendienteContainer("Lugar", "Horacio Zevallos"));
         recviewObra01 = (RecyclerView) findViewById(R.id.RecView_Tab01);
         //la siguiente liena no es totalmnet necesria
         recviewObra01.setHasFixedSize(true);

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,18 +45,25 @@ public class RegionZonasEmergenciaAdapter extends RecyclerView.Adapter<RegionZon
 
         private TextView txtTitulo;
         private TextView txtSubt;
+        private ImageView ImageViewZonaE;
 
         public RegionZonaEmergenciaViewHolder(View itemView) {
             super(itemView);
 
             txtTitulo = (TextView) itemView.findViewById(R.id.lbl_titulo_zonaE);
             txtSubt = (TextView) itemView.findViewById(R.id.lbl_subt_zonaE);
+            ImageViewZonaE = (ImageView) itemView.findViewById(R.id.Imgv_zonaE);
 
         }
 
         public void BindRegionZOnaEmergencia(RegionZonasEmergenciaContainer p) {
             txtTitulo.setText(p.getTitulo_ZonaE());
             txtSubt.setText(p.getSubt_ZonaE());
+            if (p.getTitulo_ZonaE().equals("Zona de Prioridad Alta:")) {
+                ImageViewZonaE.setImageResource(R.mipmap.ic_region_red);
+            } else if (p.getTitulo_ZonaE().equals("Zona de Prioridad Media:")) {
+                ImageViewZonaE.setImageResource(R.mipmap.ic_region_ylw);
+            }
         }
     }
 

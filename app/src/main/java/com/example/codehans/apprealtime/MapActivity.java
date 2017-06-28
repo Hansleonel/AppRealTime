@@ -81,6 +81,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("el sexto marcador"));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-15.8402218, -70.02188050000001)).title("el septimo marcador").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
                 mapa.addMarker(new MarkerOptions().position(new LatLng(-16.4090474, -71.53745099999998)).title("el octavo marcador"));
+                mapa.addMarker(new MarkerOptions().position(new LatLng(-9.526115, -77.528779)).title("Huaraz").snippet("Grado de Alerta Medio").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+                mapa.addMarker(new MarkerOptions().position(new LatLng(-7.161746, -78.512785)).title("Cajamarca").icon(BitmapDescriptorFactory.defaultMarker(98)));
             }
         });
 
@@ -94,6 +96,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
 
                 switch (menuItem.getItemId()) {
+                    case R.id.menu_seccion_2:
+                        Intent i = new Intent(MapActivity.this, ObraActivity.class);
+                        startActivity(i);
+                        break;
+                    case R.id.menu_seccion_3:
+                        Intent d = new Intent(MapActivity.this, PeticionActivity.class);
+                        startActivity(d);
+                        break;
                     case R.id.menu_opcion_1:
                         //fragment = new Fragment_01();
                         //fragmentTransaction = true;
@@ -145,6 +155,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 if (mapinteger % 2 == 1) {
                     Intent i = new Intent(MapActivity.this, RegionActivity.class);
                     startActivity(i);
+
+                    Toast.makeText(MapActivity.this, "la posicion es " + String.valueOf(marker.getPosition()), Toast.LENGTH_LONG).show();
                 }
 
                 return false;

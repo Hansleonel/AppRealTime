@@ -45,7 +45,9 @@
         <activity android:name=".RegionDetailActivity" />
         <activity android:name=".ObraActivity" />
         <activity android:name=".CountryActivity" />
-        <activity android:name=".RegionZonasEmergenciaActivity"></activity>
+        <activity android:name=".RegionZonasEmergenciaActivity" />
+        <activity android:name=".PeticionActivity" />
+        <activity android:name=".ChartActivity"></activity>
     </application>
 
 </manifest>

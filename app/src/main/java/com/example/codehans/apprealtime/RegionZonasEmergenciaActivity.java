@@ -73,6 +73,9 @@ public class RegionZonasEmergenciaActivity extends AppCompatActivity {
         ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Media:", "Horacio Zevallos"));
         ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Media:", "Balconcillo"));
         ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Media:", "El Bosque"));
+        ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Baja:", "Taucumarca"));
+        ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Baja:", "Pisac"));
+        ArrayDatosZonaE.add(new RegionZonasEmergenciaContainer("Zona de Prioridad Baja:", "El Bosque II"));
 
         RegionZonasEmergenciaAdapter adaptador = new RegionZonasEmergenciaAdapter(ArrayDatosZonaE);
 

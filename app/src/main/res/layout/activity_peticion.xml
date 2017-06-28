@@ -2,35 +2,35 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout_zonas_emergencia"
+    android:id="@+id/drawer_layout_peticion"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.codehans.apprealtime.RegionZonasEmergenciaActivity">
+    tools:context="com.example.codehans.apprealtime.PeticionActivity">
 
-    <include layout="@layout/content_region_zonas_emergencia" />
-
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_zonas_emergencia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@mipmap/ic_chart" />
-    </android.support.design.widget.CoordinatorLayout>
+    <include layout="@layout/content_peticion" />
 
     <android.support.design.widget.NavigationView
-        android:id="@+id/navigationZonasEmergencia"
+        android:id="@+id/navigationViewPeticiones"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_navview"
         app:menu="@menu/menu_navview" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_peticion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@mipmap/ic_petition_green" />
+    </android.support.design.widget.CoordinatorLayout>
 
 
 </android.support.v4.widget.DrawerLayout>

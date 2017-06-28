@@ -13,6 +13,11 @@
     <string name="option02">Prensa</string>
     <string name="title_activity_region">RegionActivity</string>
     <string name="app_tittle01">COEN</string>
+    <string name="ubication">Ubicacion</string>
+    <string name="functionary">Funcionario del Ministerio</string>
+    <string name="Type">Tipo de Peticion</string>
+    <string name="Reason">Motivo de Peticion</string>
+    <string name="send">Enviar</string>
 
 
 </resources>

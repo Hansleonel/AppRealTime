@@ -10,6 +10,19 @@
 
     <include layout="@layout/content_obra" />
 
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_obras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email" />
+    </android.support.design.widget.CoordinatorLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/navigationViewObra"
         android:layout_width="wrap_content"
@@ -18,5 +31,6 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_navview"
         app:menu="@menu/menu_navview" />
+
 
 </android.support.v4.widget.DrawerLayout>

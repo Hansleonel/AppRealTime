@@ -1,5 +1,6 @@
 package com.example.codehans.apprealtime;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -39,6 +40,7 @@ public class CountryActivity extends AppCompatActivity implements OnMapReadyCall
         appbar_country = (Toolbar) findViewById(R.id.appbar_country);
         setSupportActionBar(appbar_country);
 
+
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -59,6 +61,8 @@ public class CountryActivity extends AppCompatActivity implements OnMapReadyCall
                 Map_country.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("Cuarto Marcador"));
                 Map_country.addMarker(new MarkerOptions().position(new LatLng(-3.5564921, -80.42708849999997)).title("El quinto Marcador").icon(BitmapDescriptorFactory.defaultMarker(98)));
                 Map_country.addMarker(new MarkerOptions().position(new LatLng(-18.0065679, -70.2462741)).title("El sexto marcador"));
+                Map_country.addMarker(new MarkerOptions().position(new LatLng(-9.526115, -77.528779)).title("Huaraz").snippet("Grado de Alerta Medio").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+                Map_country.addMarker(new MarkerOptions().position(new LatLng(-7.161746, -78.512785)).title("Cajamarca").icon(BitmapDescriptorFactory.defaultMarker(98)));
                 //Map_country.addMarker(new MarkerOptions().position(new LatLng()))
             }
         });
