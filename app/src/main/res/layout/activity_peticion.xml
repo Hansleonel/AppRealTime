@@ -10,14 +10,6 @@
 
     <include layout="@layout/content_peticion" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigationViewPeticiones"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/header_navview"
-        app:menu="@menu/menu_navview" />
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="wrap_content"
@@ -31,6 +23,15 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@mipmap/ic_petition_green" />
     </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationViewPeticiones"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header_navview"
+        app:menu="@menu/menu_navview" />
 
 
 </android.support.v4.widget.DrawerLayout>
